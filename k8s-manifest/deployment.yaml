@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx
+  name: vite
   namespace: my-app
 spec:
   replicas: 2
@@ -14,8 +14,8 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: vite
+        image: 8076381912/argocd:v1
         ports:
         - containerPort: 80
 ---
